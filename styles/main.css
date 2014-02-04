@@ -1,0 +1,27 @@
+.done-true {
+    text-decoration: line-through;
+    color: grey;
+}
+
+.task-text-hover {
+	border-color: gray;
+	border-width: 1px;
+	border-style: solid;
+	width: 100%;
+	display: inline;
+}
+
+.task-text {
+	border-color: transparent;
+	border-width: 1px;
+	border-style: solid;
+	width: 100%;
+	display: inline;
+}
+
+.full-width{
+	display: block;
+	width: 100%;
+}
+
+
