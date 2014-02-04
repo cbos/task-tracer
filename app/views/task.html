@@ -1,6 +1,6 @@
 <div>
 	<div ng-mouseenter="scope.taskHover=true" ng-mouseleave="scope.taskHover=false">
-		<i ng-click="task.done=!task.done;updateTaskText();" class="fa"
+		<i ng-click="task.done=!task.done;saveChanges();" class="fa"
 			ng-class="{ 'fa-square-o': !task.done, 'fa-check-square-o': task.done}"></i> <span ng-mouseenter="scope.hover=true"
 			ng-mouseleave="scope.hover=false" ng-class="{ 'task-text-hover': scope.hover, 'task-text': !scope.hover}"
 			ng-click="scope.edit=true" ng-hide="scope.edit">{{task.text}}&nbsp;</span><BR>
