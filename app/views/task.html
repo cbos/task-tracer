@@ -5,8 +5,8 @@
 			ng-mouseleave="scope.hover=false" ng-class="{ 'task-text-hover': scope.hover, 'task-text': !scope.hover}"
 			ng-click="scope.edit=true" ng-hide="scope.edit">{{task.text}}&nbsp;</span><BR>
 
-		<textarea ng-show="scope.edit" style="height: 23px;" wrap="off" ng-model="task.text"
-			ng-blur="saveChanges();scope.edit=false;"></textarea>
+		<textarea ng-show="scope.edit" class="form-control" style="height: 23px; padding: 6px;padding-top: 0px;" wrap="off" ng-model="task.text"
+			ng-blur="saveChanges();scope.edit=false;" ng-keypress="changeKeyPress($event);"></textarea>
 		<ul class="list-inline" style="font-size: 12px;" ng-show="scope.taskHover">
 			<li>&nbsp;</li>
 			<li><a href="{{task.url}}" target="_blank"><i class="fa fa-external-link"></i>&nbsp;URL</a></li>
