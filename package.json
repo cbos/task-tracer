@@ -45,7 +45,7 @@
     "node": ">=0.8.0"
   },
   "scripts": {
-  	"bowerinstall" : "bower install"
+  	"install" : "bower install",
     "test": "grunt test"
   }
 }
