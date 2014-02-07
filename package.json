@@ -46,7 +46,7 @@
   },
   "scripts": {
   	"install" : "bower install",
-  	"build" : "grunt build",
+  	"prepublish" : "grunt build",
     "test": "grunt test"
   }
 }
