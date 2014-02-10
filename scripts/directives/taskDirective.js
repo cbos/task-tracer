@@ -27,6 +27,12 @@ angular.module('taskTracerApp').directive(
 								Taskhelper.removeTask(task,
 										$scope.task.subtasks);
 							}
+							$scope.changeKeyPress = function(event){
+								if(event.which === 13) {
+									event.preventDefault();
+									event.currentTarget.blur();
+								}
+							}
 						} ],
 				link : function postLink(scope, element, attrs, controller) {
 					// element.text('this is the taskDirective directive' +
