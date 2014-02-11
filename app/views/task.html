@@ -1,12 +1,11 @@
 <div>
 	<div ng-mouseenter="scope.taskHover=true" ng-mouseleave="scope.taskHover=false">
 		<i ng-click="task.done=!task.done;saveChanges();" class="fa"
-			ng-class="{ 'fa-square-o': !task.done, 'fa-check-square-o': task.done}"></i> <span ng-mouseenter="scope.hover=true"
+			ng-class="{ 'fa-square-o': !task.done, 'fa-check-square-o': task.done}"></i><span ng-mouseenter="scope.hover=true"
 			ng-mouseleave="scope.hover=false" ng-class="{ 'task-text-hover': scope.hover, 'task-text': !scope.hover}"
-			ng-click="scope.edit=true" ng-hide="scope.edit">{{task.text}}&nbsp;</span><BR>
-
-		<textarea ng-show="scope.edit" class="form-control" style="height: 23px; padding: 6px;padding-top: 0px;" wrap="off" ng-model="task.text"
-			ng-blur="saveChanges();scope.edit=false;" ng-keypress="changeKeyPress($event);"></textarea>
+			ng-click="taskEdit=true" ng-hide="taskEdit">{{task.text}}&nbsp;</span>
+		<input ng-show="taskEdit" type="text" class="form-control" ng-model="task.text" size="30" placeholder="add new task for today here" 
+		ng-blur="editDone();" ng-keypress="changeKeyPress($event);">
 		<ul class="list-inline" style="font-size: 12px;" ng-show="scope.taskHover">
 			<li>&nbsp;</li>
 			<li><a href="{{task.url}}" target="_blank"><i class="fa fa-external-link"></i>&nbsp;URL</a></li>
