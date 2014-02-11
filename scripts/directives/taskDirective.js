@@ -30,8 +30,14 @@ angular.module('taskTracerApp').directive(
 							$scope.changeKeyPress = function(event){
 								if(event.which === 13) {
 									event.preventDefault();
-									event.currentTarget.blur();
+									$scope.editDone();
 								}
+							}
+							$scope.editDone = function()
+							{
+								debugger;
+								$scope.saveChanges();
+								$scope.taskEdit=false;
 							}
 						} ],
 				link : function postLink(scope, element, attrs, controller) {
